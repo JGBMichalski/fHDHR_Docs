@@ -261,18 +261,6 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../related_projects.md" class="md-tabs__link">
-      Related Projects
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
   
   
   
@@ -573,26 +561,11 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../related_projects.md" class="md-nav__link">
-        Related Projects
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -601,13 +574,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_6">
           Getting Involved
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Getting Involved" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Getting Involved
         </label>
@@ -749,33 +722,61 @@
 </ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<blockquote>
 <p>The below instructions use the user "sysop", but you can run it as any user. The script will allow you to run as root, but warns against doing so.</p>
-<ul>
-<li>Download the release zip, or git clone to your prefered location.<br />
-<code class="highlight">cd /home/sysop &amp;&amp; git clone https://github.com/fHDHR/fHDHR.git</code></li>
-<li>Navigate into your script directory and install the python requirements.<br />
-<code class="highlight">cd fHDHR &amp;&amp; pip3 install -r requirements.txt</code></li>
-<li>Copy the included <code class="highlight">config.example.ini</code> file to a known location.<br />
-<em>The script will not run without this - there is no default configuration file location.</em><br />
-<a href="../config">Modify the configuration file to suit your needs.</a><br />
-<code class="highlight">cp config.example.ini /home/sysop/config.ini</code>  </li>
-<li><a href="../plugins">Install plugins.</a> fHDHR will technically run without plugins installed, but is particularly useless without an "origin" plugin.  </li>
-<li>Install plugin python requirements file with the <code class="highlight">pip3 install -r requirements.txt</code> for each plugin.  </li>
-<li>Run with the path to the config file. <code class="highlight">python3 /home/sysop/fhdhr/main.py -c=/home/sysop/config.ini</code></li>
-</ul>
+</blockquote>
+<ol>
+<li>Download the release zip, or git clone to your prefered location.  </li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /home/sysop <span class="o">&amp;&amp;</span> git clone https://github.com/fHDHR/fHDHR.git
+</code></pre></div>
+<ol start="2">
+<li>Navigate into your script directory and install the python requirements.  </li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> fHDHR <span class="o">&amp;&amp;</span> pip3 install -r requirements.txt
+</code></pre></div>
+<ol start="3">
+<li>Copy the included <code class="highlight">config.example.ini</code> file to a known location:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>cp config.example.ini /home/sysop/config.ini
+</code></pre></div>
+<blockquote>
+<p>The script will not run without this - there is no default configuration file location. </p>
+</blockquote>
+<ol start="4">
+<li>
+<p>Modify the configuration file to suit your needs.</p>
+</li>
+<li>
+<p>Install desired fHDHR plugins.</p>
+</li>
+</ol>
+<blockquote>
+<p>fHDHR will technically run without plugins installed, but is practically useless without an "origin" plugin.  </p>
+</blockquote>
+<ol start="6">
+<li>Install plugin python requirements file:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>pip3 install -r requirements.txt
+</code></pre></div>
+<ol start="7">
+<li>Run with the path to the config file:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python3 /home/sysop/fhdhr/main.py -c<span class="o">=</span>/home/sysop/config.ini
+</code></pre></div>
 <h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
 <p>If you wish to use fHDHR in Docker, then check out the <a href="../installation_docker/">Docker documentation</a>. </p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<p>Now that you have fHDHR running, You can navigate (in a web browser) to the IP:Port from the configuration step above.<br />
-If you did not setup a <code class="highlight">discovery_address</code> in your config, SSDP will be disabled. This is not a problem as clients like Plex can have the IP:Port entered manually!<br />
-You can copy the xmltv link from the webUI and use that in your client software to provide Channel Guide information.</p>
+<p>Now that you have fHDHR running, you can navigate (in a web browser) to the IP:Port from the configuration step above.  </p>
+<p>If you did not setup a <code class="highlight">discovery_address</code> in your config, SSDP will be disabled. This is not a problem as clients like Plex can have the IP:Port entered manually!  </p>
+<p>You can copy the xmltv link from the webUI and use that in your client software to provide Channel Guide information.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-04-11T13:30:24+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-04-11</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-04-11T13:55:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-04-11</span>
       
     
   </small>
